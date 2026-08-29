@@ -1,16 +1,16 @@
 <?php
 // Fonction pour afficher les manifestations
 function getManifestations($pdo) {
-    $sql = "SELECT * FROM manifestations ORDER BY date DESC";
+    $sql = "SELECT id, titreManif, dateDebManif, nbPlacesManif FROM manifestations ORDER BY dateDebManif DESC";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 // Fonction pour ajouter une manifestation
-function addManifestation($pdo, $nom, $date, $lieu, $description) {
-    $sql = "INSERT INTO manifestations (nom, date, lieu, description) VALUES (?, ?, ?, ?)";
+function addManifestation($pdo, $nom, $date,  $nbPlacesManif) {
+    $sql = "INSERT INTO manifestations (titreManif, dateDebManif, nbPlaceManif) VALUES (?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$nom, $date, $lieu, $description]);
+    $stmt->execute([$nom, $date, $nbPlacesManif]);
 }
 
 // Fonction pour supprimer une manifestation

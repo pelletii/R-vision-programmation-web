@@ -9,13 +9,13 @@ function isLoggedIn() {
 // Connexion (non sécurisée)
 function login($pdo, $username, $password) {
     // En production, il faudrait hacher le mot de passe et utiliser des requêtes préparées !
-    $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+    $sql = "SELECT * FROM utilisateurs WHERE pseudoUtil = ? AND mdpUtil = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$username, $password]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        $_SESSION['user'] = $user;
+        $_SESSION['user'] = $username;
         return true;
     }
     return false;

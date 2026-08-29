@@ -16,19 +16,19 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS personnalisé -->
-    <link href="/mediatheque_manifestations/css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/mediatheque_manifestations/dashboard.php">Gestion des Manifestations</a>
+            <a class="navbar-brand" href="../dashboard.php">Gestion des Manifestations</a>
             <div class="navbar-nav">
                 <?php if (isset($_SESSION['user'])): ?>
-                    <a class="nav-link" href="/mediatheque_manifestations/manifestations/add.php">Ajouter</a>
-                    <a class="nav-link" href="/mediatheque_manifestations/logout.php">Déconnexion</a>
+                    <a class="nav-link" href="manifestations/add.php">Ajouter</a>
+                    <a class="nav-link" href="logout.php">Déconnexion</a>
                 <?php else: ?>
-                    <a class="nav-link" href="/mediatheque_manifestations/index.php">Connexion</a>
+                    <a class="nav-link" href="index.php">Connexion</a>
                 <?php endif; ?>
             </div>
         </div>
