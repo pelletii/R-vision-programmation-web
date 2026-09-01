@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/auth.php';
 $pageTitle = "Connexion";
 
 if (isLoggedIn()) {
-    header("Location: dashboard.php");
+    header("Location: /R-vision-programmation-web/site/dashboard.php");
     exit;
 }
 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     if (login($pdo, $username, $password)) {
-        header("Location: dashboard.php");
+        header("Location: /R-vision-programmation-web/site/dashboard.php");
         exit;
     } else {
         $error = "Identifiants incorrects";
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Inclure le header
-require_once 'includes/header.php';
+require_once __DIR__ . '/includes/header.php';
 ?>
 
         <div class="row justify-content-center">
@@ -53,5 +53,5 @@ require_once 'includes/header.php';
 
 <?php
 // Inclure le footer
-require_once 'includes/footer.php';
+require_once __DIR__ . '/includes/footer.php';
 ?>

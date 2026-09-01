@@ -1,5 +1,27 @@
 body {
-  background-color: #f8f9fa;
+  background-color: #daeafb;
+}
+.header-background {
+  background-image: url("https://mistralaichatupprodswe.blob.core.windows.net/chat-images/21/46/fb/2146fb5e-99d5-4f7a-af7a-c5b25a72c613/c2467c60-d431-4a8e-9437-a3014bc7d4e7/0964ec79-4bb1-4eb7-880e-5241a4295d7d?sv=2025-01-05&spr=https&se=2026-08-31T17%3A38%3A14Z&skoid=c9baccad-3639-4379-a088-07b7e349293c&sktid=4fbc1168-2984-4d17-af19-ac5138c2378e&skt=2026-08-31T16%3A38%3A14Z&ske=2026-08-31T17%3A38%3A14Z&sks=b&skv=2025-01-05&sr=b&sp=r&sig=F76AFtcgWovyuyjjnkS2r3C4EdBq9FHXCZ0%2BPicdf5c%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px; /* Ajustez la hauteur selon vos besoins */
+  position: relative;
+}
+
+.header-background .navbar {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fond semi-transparent pour la barre de navigation */
+}
+
+.header-background .navbar-brand,
+.header-background .nav-link {
+  color: white !important; /* Texte en blanc pour contraster avec l'arrière-plan */
 }
 
 .card {

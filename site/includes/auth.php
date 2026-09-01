@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Vérifie si l'utilisateur est connecté
+
 function isLoggedIn() {
     return isset($_SESSION['user']);
 }
